@@ -37,7 +37,7 @@ public class StudentMain
 	}
 	void display() {
 		for(Student student:list) {
-			System.out.println("Student roll no:"+student.getRollno()+" Student age :"+student.getAge());
+			System.out.println("Student roll no :"+student.getRollno()+" Student age :"+student.getAge());
 		}
 	}
 }

@@ -40,7 +40,7 @@ public int hashCode() {
 	   }
 		
 	    Student that=(Student)arg;	
-		boolean isequal=this.rollno==that.rollno;
+		boolean isequal=this.rollno.equals(that.rollno);
 		return isequal;
 	}
 
