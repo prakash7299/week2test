@@ -2,8 +2,8 @@ package org.dxctraining;
 
 
 public class Student {
-	String rollno;
-	int age;
+	private String rollno;
+	private int age;
 	public Student(String rollno,int age) {
 		this.rollno=rollno;
 		this.age=age;	
@@ -26,7 +26,8 @@ public class Student {
 	}
 	@Override
 public int hashCode() {
-	return age;
+	int a=rollno.hashCode();
+	return a;
 }
 	@Override
 	public boolean equals(Object arg) {
