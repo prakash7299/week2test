@@ -23,11 +23,11 @@ public class StudentMain
 		store.add(student3);
 		Student student4=new Student("104",22);
 		store.add(student4);
-		displayStudents();
+		filterStudents();
 		display();
 	}
 	
-	void displayStudents() {
+	void filterStudents() {
 		for(Student student:store) {
 			if(student.getAge()>21) {
 			list.add(student);
