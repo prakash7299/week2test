@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Set;
 public class StudentMain 
 {
+	Set<Student> store=new HashSet<>();
     public static void main( String[] args )
     {
     	StudentMain obj1 = new StudentMain();
@@ -12,7 +13,6 @@ public class StudentMain
     }
 
 	private void runapp() {
-		Set<Student> store=new HashSet<>();
 		Student student1=new Student("101",27);
 		store.add(student1);
 		Student student2=new Student("102",19);
@@ -21,13 +21,16 @@ public class StudentMain
 		store.add(student3);
 		Student student4=new Student("104",22);
 		store.add(student4);
+		display();
+	}
+	
+	void display() {
 		for(Student student:store) {
 			if(student.getAge()>21) {
 				System.out.println("student rollno :"+student.getRollno()+"student age"+student.getAge());
 			}
 			
 		}
-		
 		
 	}
 }
