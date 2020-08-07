@@ -1,11 +1,13 @@
 package org.dxctraining;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 public class StudentMain 
 {
 	Set<Student> store=new HashSet<>();
+	List<Student> list=new ArrayList();
     public static void main( String[] args )
     {
     	StudentMain obj1 = new StudentMain();
@@ -21,16 +23,21 @@ public class StudentMain
 		store.add(student3);
 		Student student4=new Student("104",22);
 		store.add(student4);
+		displayStudents();
 		display();
 	}
 	
-	void display() {
+	void displayStudents() {
 		for(Student student:store) {
 			if(student.getAge()>21) {
-				System.out.println("student rollno :"+student.getRollno()+"student age"+student.getAge());
+			list.add(student);
 			}
-			
 		}
 		
+	}
+	void display() {
+		for(Student student:list) {
+			System.out.println("Student roll no:"+student.getRollno()+" Student age :"+student.getAge());
+		}
 	}
 }
